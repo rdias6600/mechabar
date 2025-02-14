@@ -75,7 +75,7 @@ install_dependencies() {
   printf "\n\033[1;32mInstalling dependencies...\033[0m\n"
 
   DEPENDENCIES=(
-    bluez-utils brightnessctl pipewire pipewire-pulse python ttf-jetbrains-mono-nerd wireplumber
+    bluez-utils brightnessctl pipewire pipewire-pulse python ttf-jetbrains-mono-nerd wireplumber rofi-wayland
   )
 
   for PACKAGE in "${DEPENDENCIES[@]}"; do
@@ -86,7 +86,6 @@ install_dependencies() {
 install_aur_packages() {
   printf "\n\033[1;32mUsing %s to install AUR packages...\033[0m\n" "$(get_aur_helper)"
   check_aur_packages bluetui
-  check_aur_packages rofi-lbonn-wayland-git
 }
 
 copy_configs() {
